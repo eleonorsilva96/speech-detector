@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>ChatCord App</title>
+  </head>
+  <body>
+    <div class="chat-container">
+      <header class="chat-header d-flex">
+        <div class="icon-wrap">
+          <i class="icon">
+            <svg viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M3.36 5.76001C3.62509 5.76001 3.84 5.97491 3.84 6.24001L3.84 12.96C3.84 13.2251 3.62509 13.44 3.36 13.44C3.0949 13.44 2.88 13.2251 2.88 12.96L2.88 6.24001C2.88 5.97491 3.0949 5.76001 3.36 5.76001Z" fill="#B8D1F4"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.24003 3.84C6.50513 3.84 6.72003 4.0549 6.72003 4.32L6.72003 14.88C6.72003 15.1451 6.50513 15.36 6.24003 15.36C5.97493 15.36 5.76003 15.1451 5.76003 14.88L5.76003 4.32C5.76003 4.0549 5.97494 3.84 6.24003 3.84Z" fill="#B8D1F4"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.11998 1.91998C9.38507 1.91998 9.59998 2.13489 9.59998 2.39998L9.59997 16.8C9.59997 17.0651 9.38507 17.28 9.11997 17.28C8.85488 17.28 8.63997 17.0651 8.63997 16.8L8.63998 2.39998C8.63998 2.13489 8.85488 1.91998 9.11998 1.91998Z" fill="#B8D1F4"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 -2.09815e-08C12.2651 -9.39372e-09 12.48 0.214903 12.48 0.48L12.48 18.72C12.48 18.9851 12.2651 19.2 12 19.2C11.7349 19.2 11.52 18.9851 11.52 18.72L11.52 0.48C11.52 0.214903 11.7349 -3.25692e-08 12 -2.09815e-08Z" fill="#B8D1F4"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M14.88 1.91998C15.1451 1.91998 15.36 2.13489 15.36 2.39998L15.36 16.8C15.36 17.0651 15.1451 17.28 14.88 17.28C14.6149 17.28 14.4 17.0651 14.4 16.8L14.4 2.39998C14.4 2.13489 14.6149 1.91998 14.88 1.91998Z" fill="#B8D1F4"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M17.76 3.84C18.0251 3.84 18.24 4.0549 18.24 4.32L18.24 14.88C18.24 15.1451 18.0251 15.36 17.76 15.36C17.4949 15.36 17.28 15.1451 17.28 14.88L17.28 4.32C17.28 4.0549 17.4949 3.84 17.76 3.84Z" fill="#B8D1F4"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M20.64 5.76001C20.9051 5.76001 21.12 5.97491 21.12 6.24001L21.12 12.96C21.12 13.2251 20.9051 13.44 20.64 13.44C20.3749 13.44 20.16 13.2251 20.16 12.96L20.16 6.24001C20.16 5.97491 20.3749 5.76001 20.64 5.76001Z" fill="#B8D1F4"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.480022 7.67999C0.745119 7.67999 0.960022 7.8949 0.960022 8.15999L0.960022 11.04C0.960022 11.3051 0.745119 11.52 0.480022 11.52C0.214925 11.52 2.21526e-05 11.3051 2.2141e-05 11.04L2.20151e-05 8.15999C2.20035e-05 7.8949 0.214925 7.67999 0.480022 7.67999Z" fill="#2B76DE"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M23.52 7.67999C23.7851 7.67999 24 7.8949 24 8.15999L24 11.04C24 11.3051 23.7851 11.52 23.52 11.52C23.2549 11.52 23.04 11.3051 23.04 11.04L23.04 8.15999C23.04 7.8949 23.2549 7.67999 23.52 7.67999Z" fill="#2B76DE"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.7806 13.1006C8.96806 12.9132 9.27197 12.9132 9.45943 13.1006C9.67245 13.3136 10.0719 13.6475 10.5493 13.9251C11.0335 14.2066 11.5465 14.4 12 14.4C12.9252 14.4 13.8492 13.792 14.5406 13.1006C14.7281 12.9132 15.032 12.9132 15.2194 13.1006C15.4069 13.2881 15.4069 13.592 15.2194 13.7794C14.4708 14.528 13.3125 15.36 12 15.36C11.3015 15.36 10.6145 15.0735 10.0668 14.755C9.51216 14.4325 9.04758 14.0464 8.7806 13.7794C8.59315 13.592 8.59315 13.2881 8.7806 13.1006Z" fill="#2B76DE"/>
+              </svg>              
+          </i>
+            <h1> Speech Detector</h1>
+        </div> 
+        <a id="exit" href="index.html" class="btn blue">Terminar Consulta</a>
+      </header>
+      <main class="chat-main">
+        <div class="chat-sidebar d-flex">
+          <div id="worker" class="dn-flex">
+            <h3><i class="fas fa-user-md"></i> <span class="pl-2">Funcionário(a):</span></h3>
+            <h2 id="room-name"></h2>
+          </div>
+          <div id="client" class="dn-flex">
+            <h3><i class="fas fa-users"></i> <span class="pl-2">Cliente:</span></h3>
+            <h2 id="users"></h2>
+          </div>
+        </div>
+        <div class="chat-messages"></div>
+      </main>
+      <div id="chat-form-container" class="chat-form-container">
+        <form id="chat-form">
+          <p id="demo"></p>
+          <input
+            id="msg"
+            type="text"
+            placeholder="Enter Message"
+            required
+            autocomplete="off"
+          />
+          <button id="record" name="record" class="btn-worker hide" onclick="startRecording(this);"><i class="fas fa-microphone"></i> Gravar</button>
+          <button id="stop" name="stop" class="btn-worker hide stopped" onclick="stopRecording(this);"><i class="fas fa-pause"></i> Parar</button>
+          <button id="submit" type="submit" class="btn hide"><i class="fas fa-paper-plane"></i></button>
+          <button id="submit-audio" class="btn-worker hide ml-auto" onclick="sendRecording(this);"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
+    <script src ="js/recorder.js"> </script>
+
+    <!-- <script src="js/mainAdm.js"></script> -->
+  </body>
+</html>

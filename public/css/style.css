@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
+:root {
+	--base-a: #ffffff;
+	--base-b: #f8f9fa;
+	--dark-color-a: #2B76DE;
+	--dark-color-b: #6098E6;
+	--dark-color-c: #B8D1F4;
+	--dark-color-d: #EEF4FC;
+	--title-a: #2B76DE;
+	--text-color: #212529;
+	--meta-color: #6098E6;
+	--gray-color-a: #C4CCD4;
+	--gray-color-b: #DEE2E6;
+	--gray-color-c: #ADB5BD;
+	--success-color: #5cb85c;
+	--error-color: #d9534f;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: var(--gray-color-b);
+	margin: 24px;
+}
+
+h1 {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 16px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input, button {
+	outline: none;
+}
+
+
+/* Type guide */
+
+/* Utils */
+
+h1 {
+	font-size: 1.20rem;
+}
+
+.blue {
+	color: var(--dark-color-a) !important;
+}
+
+.d-flex {
+	display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.c-flex {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.dn-flex {
+	display: none;
+  align-items: center;
+}
+
+.stopped:active {
+	color:red;
+}
+
+.ml-auto {
+	margin-left: auto;
+}
+
+.b-white {
+	background: var(--base-b) !important;
+}
+
+.pl-2 {
+	padding-left: 6px;
+}
+
+/* .jc-center {
+	justify-content: center !important;
+} */
+
+/* Layout */
+.icon-wrap-intro {
+	display: flex;
+	flex-flow: column;
+	height: 88px;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.icon-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.icon-wrap .icon {
+	width: 32px;
+	height: 25.6px;
+	margin: 0 16px;
+}
+
+.icon-wrap-intro .icon-intro {
+	width: 72px;
+	height: 57.6px;
+	margin-bottom: 8px;
+}
+
+.btn-intro {
+	align-self: center;
+	cursor: pointer;
+	padding: 8px 24px;
+	background: var(--dark-color-a);
+	color: var(--base-a);
+	border: 0;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 5px 15px;
+	background: transparent;
+	color: var(--base-a);
+	opacity: 0.65;
+	border: 0;
+	border-radius: 8px;
+	font-size: 17px;
+	margin-left: auto;
+}
+
+.btn-worker {
+	cursor: pointer;
+	padding: 5px 15px;
+	background: transparent;
+	color: var(--dark-color-a);
+	border: 0;
+	border-radius: 8px;
+	font-size: 17px;
+}
+
+.hide {
+	display: none;
+}
+
+/* Chat Page */
+
+.chat-container {
+	max-width: 1100px;
+	background: #fff;
+	margin: 30px auto;
+	border: 1px solid var(--dark-color-b);
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.chat-header {
+	justify-content: space-between !important;
+	background: var(--base-b);
+	color: var(--title-a);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	padding: 10px;
+}
+
+.chat-main {
+	display: grid;
+	grid-template-rows: 48px 1fr;
+}
+
+.chat-sidebar {
+	background: var(--dark-color-b);
+	color: #fff;
+}
+
+.chat-sidebar h2 {
+	font-size: 20px;
+	font-weight: 500;
+	padding: 10px;
+}
+
+.chat-sidebar h3 {
+	font-size: 16px;
+	font-weight: 400;
+	display: flex;
+}
+
+.chat-sidebar ul li {
+	padding: 10px 0;
+}
+
+.chat-messages {
+	padding: 24px 24px 8px 24px;
+	max-height: 500px;
+	overflow-y: scroll;
+}
+
+.chat-messages .message {
+	padding: 10px;
+	margin-bottom: 15px;
+	background-color: var(--dark-color-d);
+	color: var(--text-color);
+	border-radius: 4px;
+}
+
+.chat-messages .message .meta {
+	font-size: 15px;
+	font-weight: 500;
+	color: var(--meta-color);
+	/* opacity: 0.7; */
+	margin-bottom: 7px;
+}
+
+.chat-messages .user {
+	font-weight: 500;
+	color: var(--title-a);
+}
+
+.chat-messages .message .meta span {
+	font-weight: 300;
+	color: var(--meta-color);
+}
+
+.chat-form-container {
+	padding: 8px;
+	background-color: var(--dark-color-c);
+}
+
+.chat-form-container form {
+	display: flex;
+}
+
+.chat-form-container input[type='text'] {
+	border-radius: 8px;
+	color: var(--text-color);
+	border: 1px solid var(--dark-color-a);
+	background-color: var(--base-b);
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	flex: 0.99;
+}
+
+.chat-form-container input[type='text']:focus {
+	background-color: var(--base-a);
+}
+
+
+.chat-form-container input[type='text']::placeholder {
+	color: var(--gray-color-c);
+}
+
+/* Join Page */
+.join-container {
+	margin: 80px auto;
+	color: var(--dark-color-a);
+}
+
+.join-header {
+	text-align: center;
+	padding: 16px;
+	background: var(--dark-color-a);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.join-header h1 {
+	font-size: 1.35rem;
+	color: var(--dark-color-a);
+}
+
+.join-main {
+	padding: 30px 40px;
+	background: var(--base-a);
+	border-top: 1px solid var(--dark-color-b);
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.join-main p {
+	margin-bottom: 20px;
+}
+
+.join-main .form-control {
+	margin-bottom: 32px;
+}
+
+.join-main label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 400;
+	letter-spacing: 0.15px;
+}
+
+.join-main input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+	border: 1px solid var(--gray-color-c);
+	border-radius: 4px;
+}
+
+.join-main input[type='text']:focus {
+	border: 2px solid var(--dark-color-a);
+}
+
+.join-main select {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+	border: 1px solid var(--gray-color-c);
+	border-radius: 4px;
+}
+
+.join-main select:focus {
+	border: 2px solid var(--gray-color-c);
+}
+
+.join-main .btn {
+	margin-top: 20px;
+	width: 100%;
+}
+
+.box-1{
+	background-color:var(--gray-color);;
+	color:#19070B;
+}
+
+@media (max-width: 700px) {
+	.chat-main {
+		display: block;
+	}
+
+	.chat-sidebar {
+		display: none;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+	.join-container {
+		max-width: 1400px;
+	}
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	.join-container {
+		max-width: 800px;
+	}
+}
