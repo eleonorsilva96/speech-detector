@@ -10,4 +10,4 @@ Go to localhost:3000
 ```
 
 ## Refs
-(https://repl.it/badge/github/bradtraversy/chatcord)](https://repl.it/github/bradtraversy/chatcord)
+https://github.com/bradtraversy/chatcord
